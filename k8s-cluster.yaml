@@ -1,0 +1,18 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: roboshop-dev
+  region: us-east-1
+
+managedNodeGroups:
+  - name: roboshop-dev
+    instanceType: ["t3.micro", "t3.small", "m5.large", "t3.medium", "c5.large"]
+    spot: true
+    minSize: 2
+    maxSize: 3
+    desiredCapacity: 2
+    volumeSize: 20
+    labels: {role: roboshop-dev-worker}
+    tags:
+      nodegroup-role: roboshop-dev-worker
