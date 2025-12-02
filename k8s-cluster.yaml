@@ -7,10 +7,10 @@ metadata:
 
 managedNodeGroups:
   - name: roboshop-dev
-    instanceTypes: ["t3.micro", "t3.small", "m5.large", "t3.medium", "c5.large"]
+    instanceTypes: ["m5.large", "t3.small", "t3.medium",  "c5.large", "t3.micro"]
     spot: true
-    minSize: 2
-    maxSize: 3
+    # minSize: 2
+    # maxSize: 3
     desiredCapacity: 2
     volumeSize: 20
     labels: {role: roboshop-dev-worker}
