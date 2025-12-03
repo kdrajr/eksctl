@@ -4,15 +4,37 @@ kind: ClusterConfig
 metadata:
   name: roboshop-dev
   region: us-east-1
-
 managedNodeGroups:
   - name: roboshop-dev
-    instanceTypes: ["m5.large", "t3.medium", "c5.large", "t3.small", "t3.micro"]
+    instanceTypes: ["m5.large", "t3.small", "t3.medium","c5.large"]
+    desiredCapacity: 2 
     spot: true
-    # minSize: 2
-    # maxSize: 3
-    desiredCapacity: 2
-    volumeSize: 20
-    labels: {role: roboshop-dev-worker}
-    tags:
-      nodegroup-role: roboshop-dev-worker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# managedNodeGroups:
+#   - name: roboshop-dev
+#     instanceTypes: ["m5.large", "t3.medium", "c5.large", "t3.small"]
+#     spot: true
+#     # minSize: 2
+#     # maxSize: 3
+#     desiredCapacity: 2
+#     volumeSize: 20
+#     labels: {role: roboshop-dev-worker}
+#     tags:
+#       nodegroup-role: roboshop-dev-worker
